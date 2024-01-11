@@ -1,34 +1,41 @@
 import requests
 import time
+import random
+import json
 
-# 登录URL - 需要根据实际情况进行调整
-login_url = "http://172.16.3.19/eportal/InterFace.do?method=login"
+# 加载配置文件
+def load_config(file_path):
+    with open(file_path, 'r') as file:
+        return json.load(file)
 
-# 登录所需的数据 - 根据实际表单进行调整
-login_data = {
-    "userId": "你的用户名",
-    "password": "你的密码",
-    "service": "选择的服务（如果有的话）",
-    # 其他可能需要的字段...
-}
+config = load_config('config.json')  # 确保这里的路径是正确的
 
-# 设置请求头，模拟浏览器
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
-}
+dataLogin = config['dataLogin']
+dataCheck = config['dataCheck']
+loginUrl = config['loginUrl']
+checkStatusUrl = config['checkStatusUrl']
+
+def work():
+    res1 = requests.post(url=checkStatusUrl, headers=header, data=dataCheck)
+    res1.encoding = 'utf-8'
+    content = str(res1.text.encode().decode("unicode_escape").encode('raw_unicode_escape').decode())
+    i = content.find('"result":"')
+    if content[i + 10:i + 14] == 'wait' or content[i + 10:i + 17] == 'success':
+        print(time.asctime(time.localtime(time.time())), "当前处于在线状态。")
+    else:
+        print(time.asctime(time.localtime(time.time())), "当前已经下线，正在尝试登录！")
+        res2 = requests.post(url=loginUrl, headers=header, data=dataLogin)
+        res2.encoding = 'utf-8'
+        content2 = str(res2.text.encode().decode("unicode_escape").encode('raw_unicode_escape').decode())
+        j = content2.find('"result":"')
+        if content2[j + 10:j + 17] == 'success':
+            print(time.asctime(time.localtime(time.time())), "登录成功！")
 
 while True:
     try:
-        # 发送POST请求进行登录
-        response = requests.post(login_url, data=login_data, headers=headers)
-
-        # 检查是否登录成功
-        if response.status_code == 200:
-            print("登录成功")
-        else:
-            print("登录失败，状态码：", response.status_code)
+        work()
     except Exception as e:
-        print("出错了：", e)
-
-    # 等待时间
-    time.sleep(3)
+        print(time.asctime(time.localtime(time.time())), "监测出错，请检查网络是否连通。", str(e))
+        time.sleep(1)
+        continue
+    time.sleep(random.randint(30, 60))
