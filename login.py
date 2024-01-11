@@ -8,7 +8,7 @@ def load_config(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
 
-config = load_config('config.json')  # 确保这里的路径是正确的
+config = load_config('config.json')  # config文件路径
 
 dataLogin = config['dataLogin']
 dataCheck = config['dataCheck']
