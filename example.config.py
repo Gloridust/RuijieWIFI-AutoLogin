@@ -24,7 +24,8 @@ dataLogin = {
     'operatorPwd': '',
     'operatorUserId': '',
     'validcode': '',
-    'passwordEncrypt': 'true',
+    # 填写的是否为加密密码
+    'passwordEncrypt': 'true', # 如果密码未加密，更改为'false'
     # 填写Post内容
     'userIndex': '从Post请求中获取'
 }
