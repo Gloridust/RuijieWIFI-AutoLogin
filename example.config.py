@@ -18,7 +18,7 @@ dataLogin = {
     # 以下内容从Post请求中获取，密码填写加密后的密码
     'userId': '账号',
     'password': '加密后的密码',
-    'service': '运营商网络',
+    'service': '运营商网络',    # 例如`dianxin` `yidong`
     'queryString': '从Post请求中获取',
     # 不用填写以下内容
     'operatorPwd': '',
