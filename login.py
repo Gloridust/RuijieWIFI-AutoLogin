@@ -43,4 +43,4 @@ while True:
         print(time.asctime(time.localtime(time.time())), "监测出错，请检查网络是否连通。", str(e))
         time.sleep(1)
         continue
-    time.sleep(random.randint(25, 35))
+    time.sleep(random.randint(1, 3))
