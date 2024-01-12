@@ -1,6 +1,16 @@
 # RuijieWIFI-AutoLogin
 宜宾学院自动登录锐捷校园WiFi认证系统，防止意外掉线。理论上支持所有锐捷系统。
 
+![GitHub release](https://img.shields.io/github/v/release/Gloridust/RuijieWIFI-AutoLogin?style=flat-square)
+![GitHub release date](https://img.shields.io/github/release-date/Gloridust/RuijieWIFI-AutoLogin?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/Gloridust/RuijieWIFI-AutoLogin?style=flat-square)
+![GitHub download latest](https://img.shields.io/github/downloads/Gloridust/RuijieWIFI-AutoLogin/latest/total?style=flat-square)
+![GitHub download total](https://img.shields.io/github/downloads/Gloridust/RuijieWIFI-AutoLogin/total?style=flat-square)  
+![GitHub stars](https://img.shields.io/github/stars/Gloridust/RuijieWIFI-AutoLogin?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/Gloridust/RuijieWIFI-AutoLogin?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/Gloridust/RuijieWIFI-AutoLogin?style=flat-square)
+![GitHub issues closed](https://img.shields.io/github/issues-closed/Gloridust/RuijieWIFI-AutoLogin?style=flat-square)
+
 ## 开始
 
 1. 将代码下载或 clone 到本地
