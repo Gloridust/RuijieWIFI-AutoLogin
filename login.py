@@ -1,19 +1,13 @@
 import requests
 import time
 import random
-import json
+import config  # 导入 config.py 文件
 
-# 加载配置文件
-def load_config(file_path):
-    with open(file_path, 'r') as file:
-        return json.load(file)
-
-config = load_config('config.json')  # config文件路径
-
-dataLogin = config['dataLogin']
-dataCheck = config['dataCheck']
-loginUrl = config['loginUrl']
-checkStatusUrl = config['checkStatusUrl']
+dataLogin = config.dataLogin
+dataCheck = config.dataCheck
+loginUrl = config.loginUrl
+checkStatusUrl = config.checkStatusUrl
+header = config.header  # 假设 header 也在 config.py 中定义
 
 def work():
     res1 = requests.post(url=checkStatusUrl, headers=header, data=dataCheck)
