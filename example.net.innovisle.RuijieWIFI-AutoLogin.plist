@@ -7,6 +7,7 @@
     <key>RunAtLoad</key>
     <true/>
     <key>Program</key>
-    <string>这里替换为login.py的绝对路径</string>
+    <!-- 下面的路径替换为自己的 login.py 绝对路径 -->
+    <string>/Users/gloridust/Documents/GitHub/RuijieWIFI-AutoLogin/AutoLogin</string>
 </dict>
 </plist>

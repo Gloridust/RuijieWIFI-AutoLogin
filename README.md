@@ -66,12 +66,10 @@ chmod +x login.py
 ```
 
 2. 将项目目录下的`example.net.innovisle.RuijieWIFI-AutoLogin.plist`重命名为`net.innovisle.RuijieWIFI-AutoLogin.plist`
-3. 编辑`net.innovisle.RuijieWIFI-AutoLogin.plist`，将`login.py`的绝对路径填入。以我的为例：
-
-![jpg](./readme_src/6.jpg)
-
-4. 将创建的 `net.innovisle.RuijieWIFI-AutoLogin.plist` 文件放置在 `~/Library/LaunchAgents` 目录下。
-5. 加载 plist 文件：尝试以下命令中的任意一条：
+3. 编辑`net.innovisle.RuijieWIFI-AutoLogin.plist`，将`AutoLogin`的绝对路径填入。
+4. 编辑`AutoLogin`，将`login.py`的绝对路径填入。
+5. 将创建的 `net.innovisle.RuijieWIFI-AutoLogin.plist` 文件放置在 `~/Library/LaunchAgents` 目录下。
+6. 加载 plist 文件：尝试以下命令中的任意一条：
 
 ```bash
 launchctl load ~/Library/LaunchAgents/net.innovisle.RuijieWIFI-AutoLogin.plist
