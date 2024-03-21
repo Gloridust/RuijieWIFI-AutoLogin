@@ -1,0 +1,1 @@
+cmd /k python3 C:\Users\gloridust\Documents\GitHub\RuijieWIFI-AutoLogin\login.py
