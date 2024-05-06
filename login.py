@@ -11,10 +11,6 @@ checkStatusUrl = config.checkStatusUrl
 header = config.header  # 请求头信息
 
 def check_and_login():
-    """
-    检查当前在线状态，并根据状态执行相应的操作。
-    如果当前处于离线状态，尝试登录。
-    """
     # 检查在线状态
     response = requests.post(url=checkStatusUrl, headers=header, data=dataCheck)
     response.encoding = 'utf-8'
