@@ -85,7 +85,7 @@ launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/net.innovisle.RuijieWIFI
 
 #### Windows
 
-将脚本或其快捷方式放入 Windows 的“启动”文件夹。
+将'login.py'重命名为‘login.pyw’后，将脚本或其快捷方式放入 Windows 的“启动”文件夹。
 
 按 Windows+R 打开“运行”对话框，输入 shell:startup，然后按 Enter。这会打开“启动”文件夹。
 
